@@ -1,0 +1,47 @@
+grammar gse.xtext.assignment.AccessPolicies with org.eclipse.xtext.common.Terminals
+
+generate accessPolicies "http://www.xtext.gse/assignment/AccessPolicies"
+
+Model:
+	elements+=Element*	
+;
+
+Element:
+	Actor | Asset | Operation | Policy
+;
+
+Actor:
+	'player' name=ID ('inherits' parent=[Actor])?
+;
+
+Asset:
+	'inventory' name=ID
+;
+
+Operation:
+	'event' name=ID
+;
+
+Policy:
+	'guild_rules' name=ID '{'
+		scopes+=PlayerScope*
+	'}'
+;
+
+PlayerScope:
+	'for_player' actor=[Actor] '{'
+		rules+=Rule*
+	'}'
+;
+
+Rule:
+	AllowRule | ForbidRule
+;
+
+AllowRule:
+	'allow' operation=[Operation] 'on' asset=[Asset]
+;
+
+ForbidRule:
+	'forbid' operation=[Operation] 'on' asset=[Asset]
+;

@@ -1,0 +1,40 @@
+name: Initialize Assignment
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  setup:
+    name: Customize repository for student domain
+    runs-on: ubuntu-latest
+    # Only run when GitHub Classroom creates the student repo from the template
+    if: |
+      github.actor == 'github-classroom[bot]' && 
+      github.event.repository.fork == true
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Substitute domain placeholders
+        run: python automate/setup.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add .
+          git commit -m "Initialize domain placeholders" || exit 0
+          git push

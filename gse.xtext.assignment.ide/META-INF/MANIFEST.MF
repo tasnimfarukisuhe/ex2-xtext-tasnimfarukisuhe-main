@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: gse.xtext.assignment.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: gse.xtext.assignment.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: gse.xtext.assignment.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: gse.xtext.assignment,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: gse.xtext.assignment.ide.contentassist.antlr.internal,
+ gse.xtext.assignment.ide.contentassist.antlr

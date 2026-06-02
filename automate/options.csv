@@ -1,0 +1,51 @@
+domain_name,keyword_actor,keyword_asset,keyword_operation,keyword_policy,keyword_scope,keyword_allow,keyword_deny,keyword_allow_upper,keyword_deny_upper,example_policy,example_actor1,example_actor2,example_actor3,example_asset1,example_asset2,example_operation1,example_operation2,example_operation3
+Hospital,staff,record,action,ward_rules,applies_to,permit,forbid,PERMIT,FORBID,ICU_Access,Employee,Nurse,Doctor,PatientFile,MedicineCabinet,view,edit,unlock
+"Smart Home",user,device,command,home_profile,for_user,grant,revoke,GRANT,REVOKE,NightMode,Resident,Alice,Bob,FrontDoor,Thermostat,lock,unlock,set_temperature
+School,role,asset,activity,school_policy,for_role,authorize,prohibit,AUTHORIZE,PROHIBIT,ClassroomSafety,Guest,Student,Teacher,ExamPaper,GradeBook,view,take,edit
+"Banking System",employee,account,transaction,bank_security,for_employee,approve,decline,APPROVE,DECLINE,HighValueWire,Clerk,Cashier,Manager,CheckingAccount,Vault,view,deposit,withdraw
+"E-Commerce",member,resource,request,store_config,for_member,enable,disable,ENABLE,DISABLE,CheckoutSafety,Customer,Seller,Admin,ProductPage,InventoryDB,view,edit,delete
+"Autonomous Vehicle",system,component,signal,car_rules,for_system,trigger,suppress,TRIGGER,SUPPRESS,AutopilotSafety,Assistant,Navigation,DriveControl,SensorFeed,EngineThrottle,read,adjust,override
+"Hotel Management",staff,room,duty,hotel_policy,for_staff,assign,restrict,ASSIGN,RESTRICT,VIPSuiteAccess,Cleaner,Receptionist,Manager,GuestRoom,SafeDeposit,clean,book,open
+"Library System",borrower,item,status,library_rules,for_borrower,check_out,suspend,CHECK_OUT,SUSPEND,RareBookAccess,Guest,Student,Professor,StandardBook,ArchiveManuscript,read,borrow,scan
+"Corporate Office",employee,area,task,office_rules,for_employee,unlock,lock,UNLOCK,LOCK,ServerRoomAccess,Intern,Associate,Director,MeetingRoom,MainServerRoom,enter,reserve,reboot
+"Online Gaming",player,inventory,event,guild_rules,for_player,allow,forbid,ALLOW,FORBID,RaidAccess,Novice,Knight,GuildMaster,BasicLoot,RareChest,open,equip,trade
+"Airport Security",personnel,gate,clearance,terminal_rules,for_personnel,pass,block,PASS,BLOCK,RunwayEntry,Janitor,Guard,Pilot,BaggageArea,ControlTower,enter,patrol,land
+"Power Plant",operator,node,task,grid_rules,for_operator,execute,abort,EXECUTE,ABORT,CoreReactorAccess,Tech,Engineer,Supervisor,CoolingValve,ControlPanel,monitor,adjust,shutdown
+"Social Media",user,post,moderation,content_policy,for_user,publish,censor,PUBLISH,CENSOR,GroupSafety,StandardUser,Moderator,Admin,UserComment,FlaggedPost,write,hide,delete
+"Cloud Infrastructure",principal,service,api,iam_policy,for_principal,allow,deny,ALLOW,DENY,AdminPrivilege,Developer,Auditor,Administrator,S3Bucket,EC2Instance,read,write,terminate
+"Smart Factory",worker,machine,operation,line_rules,for_worker,start,halt,START,HALT,AssemblyLineOne,Apprentice,Operator,Inspector,ConveyorBelt,RobotArm,monitor,operate,calibrate
+"Restaurant POS",staff,inventory,action,kitchen_policy,for_staff,permit,forbid,PERMIT,FORBID,InventoryControl,Waiter,Chef,Manager,OrderQueue,FoodPantry,view,update,lock
+"Warehouse Logistics",operator,zone,task,safety_rules,for_operator,enter,restrict,ENTER,RESTRICT,HazardZoneTwo,Loader,Driver,Manager,LoadingDock,ChemicalStorage,enter,load,access
+"Museum Gallery",visitor,gallery,activity,museum_policy,for_visitor,allow,forbid,ALLOW,FORBID,SpecialExhibit,Guest,Member,Curator,MainHall,VaultExhibits,enter,photograph,touch
+"Pharmacy Management",staff,medication,transaction,safety_rules,for_staff,dispense,hold,DISPENSE,HOLD,NarcoticsSafety,Clerk,Pharmacist,ChiefPharmacist,OverTheCounter,ControlledSubstance,sell,prescribe,dispense
+"Public Transit",passenger,zone,action,fare_policy,for_passenger,validate,reject,VALIDATE,REJECT,ExpressLineGate,StandardCommuter,SeniorCitizen,Inspector,SubwayTrain,ServiceCabin,board,audit,operate
+"Smart Agriculture",system,zone,command,farm_policy,for_system,trigger,bypass,TRIGGER,BYPASS,GreenhouseControl,Sensor,Sprinkler,MainPump,SoilSensor,WaterPump,read,activate,override
+"Courtroom System",role,record,action,legal_policy,for_role,permit,restrict,PERMIT,RESTRICT,SealedEvidenceRules,Clerk,Lawyer,Judge,OpenTranscript,PrivateEvidence,read,submit,seal
+"Fitness Center",member,area,access,gym_rules,for_member,grant,deny,GRANT,DENY,SpaAccess,Guest,RegularMember,Trainer,WeightRoom,VIP_Lounge,enter,book,access
+"Research Lab",researcher,sample,task,safety_policy,for_researcher,analyze,quarantine,ANALYZE,QUARANTINE,BioSafetyLevel3,Intern,Scientist,LabDirector,StandardSample,PatentedCompound,view,test,synthesize
+"Editorial Newspaper",staff,article,step,edit_rules,for_staff,approve,reject,APPROVE,REJECT,FrontPageApproval,Writer,Editor,ChiefEditor,DraftArticle,FrontPageLayout,write,edit,publish
+"Smart Parking",driver,slot,command,garage_policy,for_driver,reserve,cancel,RESERVE,CANCEL,VIPZoneRules,Guest,Member,Operator,BasicSlot,ChargeSlot,view,park,charge
+"Movie Theater",employee,screen,action,theater_policy,for_employee,open,close,OPEN,CLOSE,ProjectorRoomAccess,Usher,Cashier,Manager,LobbyDisplay,ProjectorBox,enter,start_movie,configure
+"Maritime Ship",crew,system,control,ship_policy,for_crew,operate,override,OPERATE,OVERRIDE,EngineRoomControl,Deckhand,Engineer,Captain,CargoHold,NavigationConsole,inspect,run,override
+"Digital Wallet",user,wallet,action,wallet_rules,for_user,approve,decline,APPROVE,DECLINE,HighValueTransfer,BasicUser,VerifiedUser,Custodian,PrimaryWallet,VaultWallet,view,send,transfer
+"Real Estate MLS",agent,listing,update,MLS_rules,for_agent,publish,suspend,PUBLISH,SUSPEND,PremiumListingRules,InternAgent,AssociateAgent,Broker,StandardListing,PremiumListing,view,modify,feature
+"Space Station",astronaut,module,procedure,iss_policy,for_astronaut,execute,abort,EXECUTE,ABORT,AirlockControl,Specialist,Engineer,Commander,SleepQuarters,AirLock,enter,operate,depressurize
+"Animal Shelter",volunteer,kennel,action,shelter_policy,for_volunteer,access,restrict,ACCESS,RESTRICT,IsolationWardRules,Helper,VetAssistant,Vet,PublicPlaypen,QuarantineKennel,enter,feed,medicate
+"Food Delivery App",user,order,action,delivery_rules,for_user,accept,cancel,ACCEPT,CANCEL,DriverPayoutControl,Customer,Driver,SupportStaff,ActiveOrder,PaymentRecord,view,complete,refund
+"Smart Water",controller,valve,operation,water_policy,for_controller,open,shut,OPEN,SHUT,MainReservoirControl,NodeSensor,GateValve,PrimaryPump,DistrictPipe,ReservoirGate,monitor,toggle,flush
+"Insurance Claims",adjuster,claim,action,claims_policy,for_adjuster,approve,deny,APPROVE,DENY,HighValueClaimControl,Trainee,Adjuster,Underwriter,AutoClaim,LifeClaim,review,update,sign
+"Emergency Dispatch",dispatcher,unit,command,dispatch_policy,for_dispatcher,deploy,recall,DEPLOY,RECALL,HazmatDispatch,Operator,Dispatcher,Supervisor,PoliceCruiser,HazmatTruck,dispatch,stand_down,reassign
+"City Lighting",operator,node,action,light_policy,for_operator,enable,disable,ENABLE,DISABLE,MainGridOverride,Technician,Engineer,Dispatcher,StreetLight,MainTransformer,monitor,dim,shutoff
+"Virtual Reality",player,room,command,vr_policy,for_player,join,block,JOIN,BLOCK,VIPLobbyRules,Guest,Player,Moderator,PublicRoom,PrivateLobby,enter,speak,kick
+"Drone Fleet",pilot,drone,command,flight_rules,for_pilot,launch,ground,LAUNCH,GROUND,NoFlyZoneRules,Observer,Pilot,Controller,StandardDrone,HeavyLiftDrone,monitor,fly,land
+"Online Exam",user,exam,action,exam_policy,for_user,take,review,TAKE,REVIEW,FinalExamAccess,Student,Proctor,Professor,PracticeTest,OfficialExam,read,write,grade
+"Ticket Booking",customer,seat,booking,ticket_policy,for_customer,reserve,release,RESERVE,RELEASE,VIPBookingAccess,Guest,Member,Agent,StandardSeat,VIPSuiteSeat,view,book,upgrade
+"Winery Production",worker,tank,step,cellar_rules,for_worker,start,halt,START,HALT,CellarRules,Apprentice,CellarHand,Winemaker,HoldingTank,FermenterTank,monitor,pump,blend
+"Telemedicine Clinic",user,consultation,action,clinic_rules,for_user,join,cancel,JOIN,CANCEL,PsychiatricSafety,Patient,Nurse,Doctor,GeneralVideo,PrivateRecord,enter,view,write
+"Theme Park",staff,ride,operation,park_policy,for_staff,operate,halt,OPERATE,HALT,RollerCoasterOverride,Attendant,Operator,Engineer,Turnstile,RollerCoaster,test,run,override
+"Music Streaming",listener,track,action,playlist_policy,for_listener,play,download,PLAY,DOWNLOAD,PremiumOnlyAccess,FreeUser,PremiumUser,Artist,StandardTrack,UnreleasedTrack,stream,offline,release
+"Package Courier",worker,parcel,status,courier_policy,for_worker,scan,update,SCAN,UPDATE,HighValueTransit,Handler,Courier,Dispatcher,LetterEnvelope,InsuredPackage,view,deliver,inspect
+"Waste Management",operator,truck,action,route_policy,for_operator,assign,revoke,ASSIGN,REVOKE,CommercialHazmat,Driver,Supervisor,Manager,ResidentialTruck,HazmatVehicle,drive,service,lock
+"Collaborative Editor",user,document,operation,doc_rules,for_user,edit,view,EDIT,VIEW,AdminDocumentAccess,Commenter,Editor,Owner,SharedDoc,PrivateDoc,read,comment,delete
+"Smart Locker",user,locker,command,locker_policy,for_user,unlock,lock,UNLOCK,LOCK,MultiUserLockerRules,Courier,Customer,Admin,SmallLocker,LargeLocker,open,deposit,retrieve
+"Crowdfunding Platform",user,project,action,platform_policy,for_user,support,suspend,SUPPORT,SUSPEND,ProjectLaunchRules,Visitor,Backer,Admin,DraftProject,ActiveProject,view,back,delete
