@@ -17,12 +17,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 
 
-/**
- * Generates code from your model files on save.
- * 
- *
- * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
- */
+
 class AccessPoliciesGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
@@ -55,12 +50,12 @@ class AccessPoliciesGenerator extends AbstractGenerator {
 		}
 	'''
 
-	// Top-level declarations that are not policies do not generate access checks.
+	
 	dispatch def String generatePolicyChecks(Actor actor) ''''''
 	dispatch def String generatePolicyChecks(Asset asset) ''''''
 	dispatch def String generatePolicyChecks(Operation operation) ''''''
 
-	// Each policy contributes the allow checks from all of its player scopes.
+	
 	dispatch def String generatePolicyChecks(Policy policy) '''
 		«FOR scope : policy.scopes»
 			«generatePolicyChecks(scope)»
@@ -73,7 +68,7 @@ class AccessPoliciesGenerator extends AbstractGenerator {
 		«ENDFOR»
 	'''
 
-	// Allow rules grant access when actor, operation, and asset all match.
+	
 	dispatch def String generatePolicyChecks(AllowRule rule, PlayerScope scope) '''
 		if (isActorOrInheritedFrom(actor, "«scope.actor.name»")
 				&& "«rule.operation.name»".equals(operation)
@@ -82,10 +77,10 @@ class AccessPoliciesGenerator extends AbstractGenerator {
 		}
 	'''
 
-	// Forbid rules are intentionally ignored by the assignment.
+	
 	dispatch def String generatePolicyChecks(ForbidRule rule, PlayerScope scope) ''''''
 
-	// Only actors with a parent contribute an inheritance check.
+	
 	dispatch def String generateInheritanceCheck(Actor actor) '''
 		«IF actor.parent !== null»
 			if ("«actor.name»".equals(actor)) {
